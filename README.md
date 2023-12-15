@@ -47,3 +47,5 @@ All simulations can be performed by running commands such as the following:
 Rscript scripts/Run_Trajectories.R 500 1000 0.5 0.1 Random
 
 where the first argument is the number of particles used to compute the optimal policy from the POMCP algorithm, the second argument is the number of simulations to perform to explore the tree, the third argument is the tradeoff between exploring and exploiting the tree, the fourth argument is the grid size to produce nodes within the tree, and finally the last argument chooses the strategy to use for updating the filter and taking decisions. 
+
+The code returns an RData file containing a data frame where each line is a simulated trajectory, the first column is the cost of the trajectory, the second is the time spent under treatment within the trajectory, the third column is the number of visits, the fourth is the real length of the trajectory (equal to min(Horizon, death time)) and the last column is the time to first relapse.
